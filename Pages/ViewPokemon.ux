@@ -1,0 +1,10 @@
+<Page ux:Class="ViewPokemon">
+	<Router ux:Dependency="router" />
+	<DockPanel>
+		<JavaScript File="ViewPokemon.js" />
+		<PokeDex.Header ColumnCount="3" Background="#FA5858" Title="{pokemon.name}" ShowBack="true" />
+		<StackPanel>
+			<Image Url="{pokemon.pokemonImage}" />
+		</StackPanel>
+	</DockPanel>
+</Page>

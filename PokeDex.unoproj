@@ -1,0 +1,21 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+  	"Fuse",
+  	"FuseJS"
+  ],
+  "Includes": [
+   "*",
+   "Modules/*.js:Bundle"
+  ],
+  "Android": {
+      "Icons": {
+          "LDPI": "Assets/icon/ldpi.png",
+          "MDPI": "Assets/icon/mdpi.png",
+          "HDPI": "Assets/icon/hdpi.png",
+          "XHDPI": "Assets/icon/xhdpi.png",
+          "XXHDPI": "Assets/icon/xxhdpi.png",
+          "XXXHDPI": "Assets/icon/xxxhdpi.png",
+      }
+ }
+}

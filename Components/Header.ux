@@ -1,0 +1,8 @@
+<Grid ux:Class="PokeDex.Header" Height="50" Dock="Top" Padding="10">
+	<bool ux:Property="ShowBack" />
+	<string ux:Property="Title" />
+	<WhileTrue Value="{Property ShowBack}">
+		<Image File="../Assets/arrow.png" Alignment="Left" Opacity="1"  Clicked="{cancel}" />
+	</WhileTrue>
+	<Text FontSize="20" Value="{Property Title}" TextColor="#fff" Alignment="Center" />
+</Grid>

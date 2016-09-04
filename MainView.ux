@@ -1,0 +1,14 @@
+<App>
+    <iOS.StatusBarConfig Style="Light" />
+    <Android.StatusBarConfig Color="#FA5858" />
+    <FileImageSource File="Assets/arrow.png"   ux:Key="Arrow"/>
+
+    <Router ux:Name="router" />
+
+    <ClientPanel>
+        <Navigator DefaultTemplate="home">
+            <HomePage ux:Template="home" router="router" />
+            <ViewPokemon ux:Template="view" router="router" />
+        </Navigator>
+    </ClientPanel>
+</App>

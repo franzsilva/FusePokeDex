@@ -1,0 +1,34 @@
+<Page ux:Class="HomePage">
+
+	<Router ux:Dependency="router" />
+
+	<DockPanel>
+		<JavaScript File="AllPokemons.js" />
+		<PokeDex.Header ColumnCount="1" Background="#FA5858" Title="POKEDEX" ShowBack="false" />
+		<WhileTrue Value="{loadingNewFeed}">
+			<StackPanel Alignment="Center">
+				<Text Value="Loading..."></Text>
+			</StackPanel>
+		</WhileTrue>
+		<WhileFalse Value="{loadingNewFeed}">
+			<ScrollView Padding="10">
+				<WhileScrollable ScrollDirections="Down" Invert="true">
+					<Callback Handler="{fetchAppendData}" />
+				</WhileScrollable>
+				<DockPanel>
+					<Grid ColumnCount="2">
+						<Each Items="{pokemons}">
+							<PokeDex.PokemonCard PokemonName="{name}" PokemonImage="{pokemonImage}" Clicked="{goToPokemon}" />
+						</Each>
+					</Grid>
+					<WhileTrue Value="{appendingData}">
+						<Panel Height="80" Dock="Bottom">
+							<Image ux:Name="rotatingPokeball" Height="40" File="../Assets/Pokeball.png" />
+						</Panel>
+						<Spin Target="rotatingPokeball" Frequency="1" /> 
+					</WhileTrue>
+				</DockPanel>
+			</ScrollView>
+		</WhileFalse>
+	</DockPanel>
+</Page>
