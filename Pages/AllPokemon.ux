@@ -1,10 +1,10 @@
-<Page ux:Class="HomePage">
+<Page ux:Class="AllPokemon">
 
 	<Router ux:Dependency="router" />
 
 	<DockPanel>
-		<JavaScript File="AllPokemons.js" />
-		<PokeDex.Header ColumnCount="1" Background="#FA5858" Title="POKEDEX" ShowBack="false" />
+		<JavaScript File="AllPokemon.js" />
+		<PokeDex.Header ColumnCount="1" Dock="Top" Color="#FA5858" Title="POKEDEX" ShowBack="false" />
 		<WhileTrue Value="{loadingNewFeed}">
 			<StackPanel Alignment="Center">
 				<Text Value="Loading..."></Text>
@@ -17,7 +17,7 @@
 				</WhileScrollable>
 				<DockPanel>
 					<Grid ColumnCount="2">
-						<Each Items="{pokemons}">
+						<Each Items="{allPokemon}">
 							<PokeDex.PokemonCard PokemonName="{name}" PokemonImage="{pokemonImage}" Clicked="{goToPokemon}" />
 						</Each>
 					</Grid>

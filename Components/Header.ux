@@ -1,4 +1,4 @@
-<Grid ux:Class="PokeDex.Header" Height="50" Dock="Top" Padding="10">
+<Grid ux:Class="PokeDex.Header" Height="50" Padding="10">
 	<bool ux:Property="ShowBack" />
 	<string ux:Property="Title" />
 	<WhileTrue Value="{Property ShowBack}">

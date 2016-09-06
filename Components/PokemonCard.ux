@@ -1,7 +1,7 @@
  <DockPanel ux:Class="PokeDex.PokemonCard" Height="120" Margin="10" >
  	<string ux:Property="PokemonName" />
  	<string ux:Property="PokemonImage" />
- 	<Panel DockPanel.Dock="Top" Margin="10" Height="30">
+ 	<Panel Dock="Top" Margin="10" Height="30">
 
  		<StackPanel>
  			<Rectangle Layer="Background" CornerRadius="10" Fill="#fff">

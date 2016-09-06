@@ -1,16 +1,13 @@
 var Observable = require("FuseJS/Observable");
-var Backend = require("Modules/Backend");
-var Utility = require("Modules/Utility");
-var pokemon = Observable();
-this.Parameter.onValueChanged(module,function(param) {
-	pokemon.value = param;
-	
-});
 
+var pokemon = this.Parameter.map(function(p){
+	return p;
+});
 
 function cancel() {
 	router.goBack();
 }
+
 module.exports = {
 	pokemon: pokemon,
 	cancel: cancel
